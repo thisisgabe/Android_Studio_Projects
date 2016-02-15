@@ -1,5 +1,55 @@
 package com.cornez.tapbuttoncounter;
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+    //model
+    private Counter count;
+
+    //view
+    private TextView countView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_layout);
+        count = new Counter();
+        countView = (TextView) findViewById(R.id.textView);
+    }
+
+    public void countTap(View view) {
+        count.addCount();
+        countView.setText(count.getCount().toString());
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //inflate the menu
+        // this adds items to the action var if it is presnet.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings){
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+}
+
+/*
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -50,3 +100,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+*/
