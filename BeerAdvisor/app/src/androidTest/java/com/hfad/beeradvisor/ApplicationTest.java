@@ -1,4 +1,4 @@
-package com.example.gabriel.beeradvisor;
+package com.hfad.beeradvisor;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

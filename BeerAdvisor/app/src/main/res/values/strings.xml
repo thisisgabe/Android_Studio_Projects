@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">BeerAdvisor</string>
-    <string name ="brands"></string>
-    <string-array name="beer_colors">
-        <item>amber</item>
-        <item>gold</item>
-        <item>brown</item>
-    </string-array>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
 </resources>
