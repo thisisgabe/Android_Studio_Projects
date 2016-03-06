@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="6dip"
+    tools:context="me.gabeve.recipeapp.MainActivity"
+    android:baselineAligned="true"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/chef_icon"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textColor="#000000"
+            android:textSize="@android:dimen/app_icon_size" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:layout_gravity="top" />
+
+</LinearLayout>

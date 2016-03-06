@@ -8,6 +8,7 @@ public class Drink {
     private String description;
     private int imageResourceId;
 
+
     //drinks is an array of drinks
     public static final Drink[] drinks = {
             new Drink("Latte", "A couple of expresso shots with steamed milk",
@@ -23,6 +24,7 @@ public class Drink {
         this.name = name;
         this.description = description;
         this.imageResourceId = imageResourceId;
+
     }
 
     public String getDescription(){
@@ -36,6 +38,8 @@ public class Drink {
     public int getImageResourceId(){
         return imageResourceId;
     }
+
+
 
     public String toString(){
         return this.name;
